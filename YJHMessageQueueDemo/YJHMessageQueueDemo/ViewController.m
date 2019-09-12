@@ -33,14 +33,14 @@
         YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:i];
         [self.manager.operationQueue addOperation:operation];
     }
-
 }
+
+
 - (IBAction)scroll:(UIButton *)sender {
     for (int i = 0; i < 4; i++) {
         YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView duration:i];
         [self.manager.operationQueue addOperation:operation];
     }
-
 }
 
 - (YJHTranslationView *)translationView {
