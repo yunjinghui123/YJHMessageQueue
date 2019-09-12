@@ -33,12 +33,6 @@
         YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:i];
         [self.manager.operationQueue addOperation:operation];
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(becomeActive)
-                                                 name:UIApplicationDidBecomeActiveNotification
-                                               object:nil];
-
 
 }
 - (IBAction)scroll:(UIButton *)sender {
