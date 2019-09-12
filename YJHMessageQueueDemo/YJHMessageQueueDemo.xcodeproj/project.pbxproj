@@ -7,46 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C432270232A15AE003BDE3D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43226F232A15AE003BDE3D /* AppDelegate.m */; };
-		1C432273232A15AE003BDE3D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432272232A15AE003BDE3D /* SceneDelegate.m */; };
-		1C432276232A15AE003BDE3D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432275232A15AE003BDE3D /* ViewController.m */; };
-		1C432279232A15AE003BDE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C432277232A15AE003BDE3D /* Main.storyboard */; };
-		1C43227B232A15B2003BDE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C43227A232A15B2003BDE3D /* Assets.xcassets */; };
-		1C43227E232A15B2003BDE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C43227C232A15B2003BDE3D /* LaunchScreen.storyboard */; };
-		1C432281232A15B2003BDE3D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432280232A15B2003BDE3D /* main.m */; };
-		1C432294232A1CB6003BDE3D /* YJHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432293232A1CB6003BDE3D /* YJHScrollView.m */; };
-		1C432297232A1CCF003BDE3D /* YJHTranslationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432296232A1CCF003BDE3D /* YJHTranslationView.m */; };
-		1C4322AE232A2CB2003BDE3D /* YJHMessageQueueManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4322AA232A2CB2003BDE3D /* YJHMessageQueueManger.m */; };
-		1C4322AF232A2CB2003BDE3D /* YJHMessageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4322AD232A2CB2003BDE3D /* YJHMessageOperation.m */; };
+		1C43234B232AA096003BDE3D /* YJHMessageQueueManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432347232AA096003BDE3D /* YJHMessageQueueManger.m */; };
+		1C43234C232AA096003BDE3D /* YJHMessageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43234A232AA096003BDE3D /* YJHMessageOperation.m */; };
+		1C432353232AA0A3003BDE3D /* YJHTranslationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */; };
+		1C432354232AA0A3003BDE3D /* YJHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432351232AA0A2003BDE3D /* YJHScrollView.m */; };
+		B3B2BA26232A9F4D00DE98D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2BA25232A9F4D00DE98D6 /* AppDelegate.m */; };
+		B3B2BA29232A9F4D00DE98D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2BA28232A9F4D00DE98D6 /* ViewController.m */; };
+		B3B2BA2C232A9F4D00DE98D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BA2A232A9F4D00DE98D6 /* Main.storyboard */; };
+		B3B2BA2E232A9F5000DE98D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BA2D232A9F5000DE98D6 /* Assets.xcassets */; };
+		B3B2BA31232A9F5000DE98D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BA2F232A9F5000DE98D6 /* LaunchScreen.storyboard */; };
+		B3B2BA34232A9F5000DE98D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2BA33232A9F5000DE98D6 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C43226B232A15AE003BDE3D /* YJHMessageQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJHMessageQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C43226E232A15AE003BDE3D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C43226F232A15AE003BDE3D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C432271232A15AE003BDE3D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		1C432272232A15AE003BDE3D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		1C432274232A15AE003BDE3D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C432275232A15AE003BDE3D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1C432278232A15AE003BDE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1C43227A232A15B2003BDE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1C43227D232A15B2003BDE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1C43227F232A15B2003BDE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C432280232A15B2003BDE3D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C432292232A1CB6003BDE3D /* YJHScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJHScrollView.h; sourceTree = "<group>"; };
-		1C432293232A1CB6003BDE3D /* YJHScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJHScrollView.m; sourceTree = "<group>"; };
-		1C432295232A1CCF003BDE3D /* YJHTranslationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YJHTranslationView.h; sourceTree = "<group>"; };
-		1C432296232A1CCF003BDE3D /* YJHTranslationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YJHTranslationView.m; sourceTree = "<group>"; };
-		1C4322A8232A2CB2003BDE3D /* YJHMessageQueueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueueDelegate.h; sourceTree = "<group>"; };
-		1C4322A9232A2CB2003BDE3D /* YJHMessageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageOperation.h; sourceTree = "<group>"; };
-		1C4322AA232A2CB2003BDE3D /* YJHMessageQueueManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHMessageQueueManger.m; sourceTree = "<group>"; };
-		1C4322AB232A2CB2003BDE3D /* YJHMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueue.h; sourceTree = "<group>"; };
-		1C4322AC232A2CB2003BDE3D /* YJHMessageQueueManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueueManger.h; sourceTree = "<group>"; };
-		1C4322AD232A2CB2003BDE3D /* YJHMessageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHMessageOperation.m; sourceTree = "<group>"; };
+		1C432345232AA096003BDE3D /* YJHMessageQueueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueueDelegate.h; sourceTree = "<group>"; };
+		1C432346232AA096003BDE3D /* YJHMessageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageOperation.h; sourceTree = "<group>"; };
+		1C432347232AA096003BDE3D /* YJHMessageQueueManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHMessageQueueManger.m; sourceTree = "<group>"; };
+		1C432348232AA096003BDE3D /* YJHMessageQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueue.h; sourceTree = "<group>"; };
+		1C432349232AA096003BDE3D /* YJHMessageQueueManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHMessageQueueManger.h; sourceTree = "<group>"; };
+		1C43234A232AA096003BDE3D /* YJHMessageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHMessageOperation.m; sourceTree = "<group>"; };
+		1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHTranslationView.m; sourceTree = "<group>"; };
+		1C43234F232AA0A2003BDE3D /* YJHTranslationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHTranslationView.h; sourceTree = "<group>"; };
+		1C432351232AA0A2003BDE3D /* YJHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHScrollView.m; sourceTree = "<group>"; };
+		1C432352232AA0A2003BDE3D /* YJHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHScrollView.h; sourceTree = "<group>"; };
+		B3B2BA21232A9F4D00DE98D6 /* YJHMessageQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJHMessageQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B2BA24232A9F4D00DE98D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B3B2BA25232A9F4D00DE98D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B3B2BA27232A9F4D00DE98D6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3B2BA28232A9F4D00DE98D6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3B2BA2B232A9F4D00DE98D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3B2BA2D232A9F5000DE98D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3B2BA30232A9F5000DE98D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3B2BA32232A9F5000DE98D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B2BA33232A9F5000DE98D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C432268232A15AE003BDE3D /* Frameworks */ = {
+		B3B2BA1E232A9F4D00DE98D6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,85 +53,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C432262232A15AE003BDE3D = {
+		1C432344232AA095003BDE3D /* YJHMessageQueue */ = {
 			isa = PBXGroup;
 			children = (
-				1C43226D232A15AE003BDE3D /* YJHMessageQueueDemo */,
-				1C43226C232A15AE003BDE3D /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		1C43226C232A15AE003BDE3D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1C43226B232A15AE003BDE3D /* YJHMessageQueueDemo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1C43226D232A15AE003BDE3D /* YJHMessageQueueDemo */ = {
-			isa = PBXGroup;
-			children = (
-				1C4322A7232A2CB2003BDE3D /* YJHMessageQueue */,
-				1C432290232A1C9D003BDE3D /* YJHScrollDemo */,
-				1C432291232A1C9D003BDE3D /* YJHTranslationDemo */,
-				1C43226E232A15AE003BDE3D /* AppDelegate.h */,
-				1C43226F232A15AE003BDE3D /* AppDelegate.m */,
-				1C432271232A15AE003BDE3D /* SceneDelegate.h */,
-				1C432272232A15AE003BDE3D /* SceneDelegate.m */,
-				1C432274232A15AE003BDE3D /* ViewController.h */,
-				1C432275232A15AE003BDE3D /* ViewController.m */,
-				1C432277232A15AE003BDE3D /* Main.storyboard */,
-				1C43227A232A15B2003BDE3D /* Assets.xcassets */,
-				1C43227C232A15B2003BDE3D /* LaunchScreen.storyboard */,
-				1C43227F232A15B2003BDE3D /* Info.plist */,
-				1C432280232A15B2003BDE3D /* main.m */,
-			);
-			path = YJHMessageQueueDemo;
-			sourceTree = "<group>";
-		};
-		1C432290232A1C9D003BDE3D /* YJHScrollDemo */ = {
-			isa = PBXGroup;
-			children = (
-				1C432292232A1CB6003BDE3D /* YJHScrollView.h */,
-				1C432293232A1CB6003BDE3D /* YJHScrollView.m */,
-			);
-			path = YJHScrollDemo;
-			sourceTree = "<group>";
-		};
-		1C432291232A1C9D003BDE3D /* YJHTranslationDemo */ = {
-			isa = PBXGroup;
-			children = (
-				1C432295232A1CCF003BDE3D /* YJHTranslationView.h */,
-				1C432296232A1CCF003BDE3D /* YJHTranslationView.m */,
-			);
-			path = YJHTranslationDemo;
-			sourceTree = "<group>";
-		};
-		1C4322A7232A2CB2003BDE3D /* YJHMessageQueue */ = {
-			isa = PBXGroup;
-			children = (
-				1C4322AB232A2CB2003BDE3D /* YJHMessageQueue.h */,
-				1C4322A8232A2CB2003BDE3D /* YJHMessageQueueDelegate.h */,
-				1C4322AC232A2CB2003BDE3D /* YJHMessageQueueManger.h */,
-				1C4322AA232A2CB2003BDE3D /* YJHMessageQueueManger.m */,
-				1C4322A9232A2CB2003BDE3D /* YJHMessageOperation.h */,
-				1C4322AD232A2CB2003BDE3D /* YJHMessageOperation.m */,
+				1C432348232AA096003BDE3D /* YJHMessageQueue.h */,
+				1C432345232AA096003BDE3D /* YJHMessageQueueDelegate.h */,
+				1C432349232AA096003BDE3D /* YJHMessageQueueManger.h */,
+				1C432347232AA096003BDE3D /* YJHMessageQueueManger.m */,
+				1C432346232AA096003BDE3D /* YJHMessageOperation.h */,
+				1C43234A232AA096003BDE3D /* YJHMessageOperation.m */,
 			);
 			name = YJHMessageQueue;
 			path = ../../YJHMessageQueue;
 			sourceTree = "<group>";
 		};
+		1C43234D232AA0A2003BDE3D /* YJHTranslationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */,
+				1C43234F232AA0A2003BDE3D /* YJHTranslationView.h */,
+			);
+			path = YJHTranslationDemo;
+			sourceTree = "<group>";
+		};
+		1C432350232AA0A2003BDE3D /* YJHScrollDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1C432351232AA0A2003BDE3D /* YJHScrollView.m */,
+				1C432352232AA0A2003BDE3D /* YJHScrollView.h */,
+			);
+			path = YJHScrollDemo;
+			sourceTree = "<group>";
+		};
+		B3B2BA18232A9F4D00DE98D6 = {
+			isa = PBXGroup;
+			children = (
+				B3B2BA23232A9F4D00DE98D6 /* YJHMessageQueueDemo */,
+				B3B2BA22232A9F4D00DE98D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3B2BA22232A9F4D00DE98D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3B2BA21232A9F4D00DE98D6 /* YJHMessageQueueDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3B2BA23232A9F4D00DE98D6 /* YJHMessageQueueDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1C432344232AA095003BDE3D /* YJHMessageQueue */,
+				1C432350232AA0A2003BDE3D /* YJHScrollDemo */,
+				1C43234D232AA0A2003BDE3D /* YJHTranslationDemo */,
+				B3B2BA24232A9F4D00DE98D6 /* AppDelegate.h */,
+				B3B2BA25232A9F4D00DE98D6 /* AppDelegate.m */,
+				B3B2BA27232A9F4D00DE98D6 /* ViewController.h */,
+				B3B2BA28232A9F4D00DE98D6 /* ViewController.m */,
+				B3B2BA2A232A9F4D00DE98D6 /* Main.storyboard */,
+				B3B2BA2D232A9F5000DE98D6 /* Assets.xcassets */,
+				B3B2BA2F232A9F5000DE98D6 /* LaunchScreen.storyboard */,
+				B3B2BA32232A9F5000DE98D6 /* Info.plist */,
+				B3B2BA33232A9F5000DE98D6 /* main.m */,
+			);
+			path = YJHMessageQueueDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C43226A232A15AE003BDE3D /* YJHMessageQueueDemo */ = {
+		B3B2BA20232A9F4D00DE98D6 /* YJHMessageQueueDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C432284232A15B2003BDE3D /* Build configuration list for PBXNativeTarget "YJHMessageQueueDemo" */;
+			buildConfigurationList = B3B2BA37232A9F5000DE98D6 /* Build configuration list for PBXNativeTarget "YJHMessageQueueDemo" */;
 			buildPhases = (
-				1C432267232A15AE003BDE3D /* Sources */,
-				1C432268232A15AE003BDE3D /* Frameworks */,
-				1C432269232A15AE003BDE3D /* Resources */,
+				B3B2BA1D232A9F4D00DE98D6 /* Sources */,
+				B3B2BA1E232A9F4D00DE98D6 /* Frameworks */,
+				B3B2BA1F232A9F4D00DE98D6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -142,24 +137,24 @@
 			);
 			name = YJHMessageQueueDemo;
 			productName = YJHMessageQueueDemo;
-			productReference = 1C43226B232A15AE003BDE3D /* YJHMessageQueueDemo.app */;
+			productReference = B3B2BA21232A9F4D00DE98D6 /* YJHMessageQueueDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1C432263232A15AE003BDE3D /* Project object */ = {
+		B3B2BA19232A9F4D00DE98D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = yunjinghui;
 				TargetAttributes = {
-					1C43226A232A15AE003BDE3D = {
-						CreatedOnToolsVersion = 11.0;
+					B3B2BA20232A9F4D00DE98D6 = {
+						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = 1C432266232A15AE003BDE3D /* Build configuration list for PBXProject "YJHMessageQueueDemo" */;
+			buildConfigurationList = B3B2BA1C232A9F4D00DE98D6 /* Build configuration list for PBXProject "YJHMessageQueueDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -167,60 +162,59 @@
 				en,
 				Base,
 			);
-			mainGroup = 1C432262232A15AE003BDE3D;
-			productRefGroup = 1C43226C232A15AE003BDE3D /* Products */;
+			mainGroup = B3B2BA18232A9F4D00DE98D6;
+			productRefGroup = B3B2BA22232A9F4D00DE98D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C43226A232A15AE003BDE3D /* YJHMessageQueueDemo */,
+				B3B2BA20232A9F4D00DE98D6 /* YJHMessageQueueDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1C432269232A15AE003BDE3D /* Resources */ = {
+		B3B2BA1F232A9F4D00DE98D6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C43227E232A15B2003BDE3D /* LaunchScreen.storyboard in Resources */,
-				1C43227B232A15B2003BDE3D /* Assets.xcassets in Resources */,
-				1C432279232A15AE003BDE3D /* Main.storyboard in Resources */,
+				B3B2BA31232A9F5000DE98D6 /* LaunchScreen.storyboard in Resources */,
+				B3B2BA2E232A9F5000DE98D6 /* Assets.xcassets in Resources */,
+				B3B2BA2C232A9F4D00DE98D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1C432267232A15AE003BDE3D /* Sources */ = {
+		B3B2BA1D232A9F4D00DE98D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C432276232A15AE003BDE3D /* ViewController.m in Sources */,
-				1C4322AF232A2CB2003BDE3D /* YJHMessageOperation.m in Sources */,
-				1C432270232A15AE003BDE3D /* AppDelegate.m in Sources */,
-				1C432294232A1CB6003BDE3D /* YJHScrollView.m in Sources */,
-				1C432297232A1CCF003BDE3D /* YJHTranslationView.m in Sources */,
-				1C432281232A15B2003BDE3D /* main.m in Sources */,
-				1C4322AE232A2CB2003BDE3D /* YJHMessageQueueManger.m in Sources */,
-				1C432273232A15AE003BDE3D /* SceneDelegate.m in Sources */,
+				B3B2BA29232A9F4D00DE98D6 /* ViewController.m in Sources */,
+				1C43234B232AA096003BDE3D /* YJHMessageQueueManger.m in Sources */,
+				B3B2BA34232A9F5000DE98D6 /* main.m in Sources */,
+				1C432354232AA0A3003BDE3D /* YJHScrollView.m in Sources */,
+				1C43234C232AA096003BDE3D /* YJHMessageOperation.m in Sources */,
+				1C432353232AA0A3003BDE3D /* YJHTranslationView.m in Sources */,
+				B3B2BA26232A9F4D00DE98D6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1C432277232A15AE003BDE3D /* Main.storyboard */ = {
+		B3B2BA2A232A9F4D00DE98D6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1C432278232A15AE003BDE3D /* Base */,
+				B3B2BA2B232A9F4D00DE98D6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1C43227C232A15B2003BDE3D /* LaunchScreen.storyboard */ = {
+		B3B2BA2F232A9F5000DE98D6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1C43227D232A15B2003BDE3D /* Base */,
+				B3B2BA30232A9F5000DE98D6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -228,7 +222,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1C432282232A15B2003BDE3D /* Debug */ = {
+		B3B2BA35232A9F5000DE98D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -260,6 +254,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -278,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +281,7 @@
 			};
 			name = Debug;
 		};
-		1C432283232A15B2003BDE3D /* Release */ = {
+		B3B2BA36232A9F5000DE98D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,6 +313,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -330,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -338,33 +334,35 @@
 			};
 			name = Release;
 		};
-		1C432285232A15B2003BDE3D /* Debug */ = {
+		B3B2BA38232A9F5000DE98D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YJHMessageQueueDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-432680302-qq.com.YJHMessageQueueDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.YJHMessageQueueDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1C432286232A15B2003BDE3D /* Release */ = {
+		B3B2BA39232A9F5000DE98D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = YJHMessageQueueDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-432680302-qq.com.YJHMessageQueueDemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "-.YJHMessageQueueDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,25 +371,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C432266232A15AE003BDE3D /* Build configuration list for PBXProject "YJHMessageQueueDemo" */ = {
+		B3B2BA1C232A9F4D00DE98D6 /* Build configuration list for PBXProject "YJHMessageQueueDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C432282232A15B2003BDE3D /* Debug */,
-				1C432283232A15B2003BDE3D /* Release */,
+				B3B2BA35232A9F5000DE98D6 /* Debug */,
+				B3B2BA36232A9F5000DE98D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C432284232A15B2003BDE3D /* Build configuration list for PBXNativeTarget "YJHMessageQueueDemo" */ = {
+		B3B2BA37232A9F5000DE98D6 /* Build configuration list for PBXNativeTarget "YJHMessageQueueDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C432285232A15B2003BDE3D /* Debug */,
-				1C432286232A15B2003BDE3D /* Release */,
+				B3B2BA38232A9F5000DE98D6 /* Debug */,
+				B3B2BA39232A9F5000DE98D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1C432263232A15AE003BDE3D /* Project object */;
+	rootObject = B3B2BA19232A9F4D00DE98D6 /* Project object */;
 }

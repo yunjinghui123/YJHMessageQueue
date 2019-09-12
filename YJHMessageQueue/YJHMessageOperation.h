@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "YJHMessageQueueDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN

@@ -24,8 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
     [self.view addSubview:self.scrollView];
     [self.view addSubview:self.translationView];
 }
@@ -35,14 +33,20 @@
         YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:i];
         [self.manager.operationQueue addOperation:operation];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(becomeActive)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+
+
 }
-
-
 - (IBAction)scroll:(UIButton *)sender {
     for (int i = 0; i < 4; i++) {
         YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView duration:i];
         [self.manager.operationQueue addOperation:operation];
     }
+
 }
 
 - (YJHTranslationView *)translationView {
@@ -68,6 +72,5 @@
     }
     return _manager;
 }
-
 
 @end

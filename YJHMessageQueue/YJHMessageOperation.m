@@ -31,7 +31,7 @@
     if (self = [super init]) {
         self.animationView = animationView;
         self.time = time;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive) name:NSExtensionHostDidBecomeActiveNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
     return self;
 }
