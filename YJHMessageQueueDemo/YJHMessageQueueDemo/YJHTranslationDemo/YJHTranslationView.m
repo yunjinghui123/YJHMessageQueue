@@ -8,7 +8,9 @@
 
 #import "YJHTranslationView.h"
 
-@implementation YJHTranslationView
+@implementation YJHTranslationView {
+    UILabel *_label;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -20,11 +22,19 @@
 - (void)setupViews {
     self.opaque = NO;
     self.hidden = YES;
+    
+    _label = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 20, 20)];
+    _label.font = [UIFont systemFontOfSize:13];
+    _label.textColor = UIColor.blackColor;
+    [self addSubview:_label];
 }
 
 - (void)showOperationViewDuration:(dispatch_time_t)during isFinish:(void (^)(BOOL))isFinish {
     self.hidden = NO;
     //    self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
+    
+    _label.text = [NSString stringWithFormat:@"%llu", during];
+    [_label sizeToFit];
     
     CATransition *animation = [CATransition animation];
     animation.duration = 0.5;
