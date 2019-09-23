@@ -65,25 +65,27 @@
 }
 
 - (void)start {
-    @try {
-        if (self.isCancelled) {
-            [self finishedChange];
-            return;
-        }
-        [self executingChange];
-        __weak typeof(self) wSelf = self;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.animationView showOperationViewDuration:self.time isFinish:^(BOOL isFinish) {
-                __strong typeof(wSelf) strongSelf = wSelf;
-                if (strongSelf != self) {
-                    return ;
-                }
-                [self finishedChange];
-            }];
-        });
-    } @catch (NSException *exception) {
-        
+    if (self.isCancelled) {
+        [self finishedChange];
+        return;
     }
+    [self executingChange];
+    __weak typeof(self) wSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.animationView showOperationViewDuration:self.time isFinish:^(BOOL isFinish) {
+            __strong typeof(wSelf) strongSelf = wSelf;
+            if (strongSelf != self) {
+                return ;
+            }
+            [self finishedChange];
+        }];
+    });
+}
+
+- (void)cancel {
+    [super cancel];
+    [self executingChange];
+    [self finishedChange];
 }
 
 

@@ -12,6 +12,9 @@
 #import "YJHScrollView.h"
 #import "YJHMessageQueue.h"
 
+
+#define kRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+
 @interface ViewController ()
 @property (nonatomic, strong) YJHMessageQueueManger *manager;
 
@@ -24,40 +27,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view addSubview:self.scrollView];
+    
     [self.view addSubview:self.translationView];
+    [self.view addSubview:self.scrollView];
 }
 
 - (IBAction)translation:(UIButton *)sender {
-    for (int i = 0; i < 4; i++) {
-        YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:i];
-        [self.manager.operationQueue addOperation:operation];
-    }
+    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:3];
+    [self.manager.operationQueue addOperation:operation];
 }
 
 - (IBAction)scroll:(UIButton *)sender {
-    for (int i = 0; i < 4; i++) {
-        YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView duration:i];
-        [self.manager.operationQueue addOperation:operation];
-    }
-}
+    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView duration:3];
+    [self.manager.operationQueue addOperation:operation];
 
-- (YJHTranslationView *)translationView {
-    if (_translationView == nil) {
-        _translationView = [[YJHTranslationView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - 350, 240, 80)];
-        _translationView.backgroundColor = UIColor.greenColor;
-    }
-    return _translationView;
 }
-
-- (YJHScrollView *)scrollView {
-    if (_scrollView == nil) {
-        _scrollView = [[YJHScrollView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - 350, 240, 80)];
-        _scrollView.backgroundColor = UIColor.brownColor;
-    }
-    return _scrollView;
-}
-
 
 - (YJHMessageQueueManger *)manager {
     if (_manager == nil) {
@@ -65,5 +49,22 @@
     }
     return _manager;
 }
+
+
+- (YJHScrollView *)scrollView {
+    if (_scrollView == nil) {
+        _scrollView = [[YJHScrollView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - 350, 240, 80)];
+    }
+    return _scrollView;
+}
+
+- (YJHTranslationView *)translationView {
+    if (_translationView == nil) {
+        _translationView = [[YJHTranslationView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - 350, 240, 80)];
+        _translationView.backgroundColor = kRandomColor;
+    }
+    return _translationView;
+}
+
 
 @end

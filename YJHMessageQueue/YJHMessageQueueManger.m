@@ -23,4 +23,16 @@
     return self;
 }
 
+- (NSUInteger)operationCount {
+    return self.operationQueue.operationCount;
+}
+
+- (void)suspend {
+    self.operationQueue.suspended = NO;
+}
+
+- (void)resume {
+    self.operationQueue.suspended = YES;
+}
+
 @end
