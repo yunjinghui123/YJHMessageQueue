@@ -28,11 +28,11 @@
 }
 
 - (void)suspend {
-    self.operationQueue.suspended = NO;
+    self.operationQueue.suspended = YES;
 }
 
 - (void)resume {
-    self.operationQueue.suspended = YES;
+    self.operationQueue.suspended = NO;
 }
 
 @end

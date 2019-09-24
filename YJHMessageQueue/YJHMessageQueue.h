@@ -9,7 +9,6 @@
 #ifndef YJHMessageQueue_h
 #define YJHMessageQueue_h
 
-#import "YJHMessageQueueDelegate.h"
 #import "YJHMessageQueueManger.h"
 #import "YJHMessageOperation.h"
 
