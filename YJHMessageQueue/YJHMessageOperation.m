@@ -10,7 +10,7 @@
 
 @interface YJHMessageOperation ()
 @property (nonatomic, weak) id<YJHMessageQueueDelegate> animationView;
-@property (nonatomic, assign) dispatch_time_t time;
+@property (nonatomic, assign) NSTimeInterval time;
 @end
 
 @implementation YJHMessageOperation {
@@ -27,7 +27,7 @@
     return self;
 }
 
-- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView duration:(dispatch_time_t)time {
+- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView duration:(NSTimeInterval)time {
     if (self = [super init]) {
         self.animationView = animationView;
         self.time = time;

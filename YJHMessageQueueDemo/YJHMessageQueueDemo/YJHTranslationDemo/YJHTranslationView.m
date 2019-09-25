@@ -29,7 +29,7 @@
     [self addSubview:_label];
 }
 
-- (void)showOperationViewDuration:(dispatch_time_t)during isFinish:(void (^)(BOOL))isFinish {
+- (void)showOperationViewDuration:(NSTimeInterval)during isFinish:(void (^)(BOOL))isFinish {
     self.hidden = NO;
     //    self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
     

@@ -22,7 +22,7 @@
     self.hidden = YES;
 }
 
-- (void)showOperationViewDuration:(dispatch_time_t)during isFinish:(void (^)(BOOL))isFinish {
+- (void)showOperationViewDuration:(NSTimeInterval)during isFinish:(void (^)(BOOL))isFinish {
     self.hidden = NO;
     self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
     [UIView animateWithDuration:0.2 animations:^{
