@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "YJHMessageQueue"
-  spec.version      = "0.0.7"
+  spec.version      = "0.0.8"
   spec.summary      = "接收消息的队列"
   spec.homepage     = "https://github.com/yunjinghui123/YJHMessageQueue"
   spec.license      = "MIT"
