@@ -33,7 +33,7 @@
     self.hidden = NO;
     //    self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
     
-    _label.text = [NSString stringWithFormat:@"%llu", during];
+    _label.text = [NSString stringWithFormat:@"%f", during];
     [_label sizeToFit];
     
     CATransition *animation = [CATransition animation];
