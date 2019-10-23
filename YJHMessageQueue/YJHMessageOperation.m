@@ -31,14 +31,9 @@
     if (self = [super init]) {
         self.animationView = animationView;
         self.time = time;
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(becomeActive) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
     return self;
 }
-
-//- (void)becomeActive {
-//    [self finishedChange];
-//}
 
 - (BOOL)isConcurrent {
     return YES;
