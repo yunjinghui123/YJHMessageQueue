@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param time 动画展示的时间
 - (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView duration:(NSTimeInterval)time;
 
+/// 操作完成
+- (void)complete;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -70,8 +70,8 @@
 		1C43234D232AA0A2003BDE3D /* YJHTranslationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */,
 				1C43234F232AA0A2003BDE3D /* YJHTranslationView.h */,
+				1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */,
 			);
 			path = YJHTranslationDemo;
 			sourceTree = "<group>";
@@ -79,8 +79,8 @@
 		1C432350232AA0A2003BDE3D /* YJHScrollDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1C432351232AA0A2003BDE3D /* YJHScrollView.m */,
 				1C432352232AA0A2003BDE3D /* YJHScrollView.h */,
+				1C432351232AA0A2003BDE3D /* YJHScrollView.m */,
 			);
 			path = YJHScrollDemo;
 			sourceTree = "<group>";

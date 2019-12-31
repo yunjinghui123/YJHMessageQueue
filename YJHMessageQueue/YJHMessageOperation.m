@@ -13,15 +13,15 @@
 @property (nonatomic, assign) NSTimeInterval time;
 @end
 
-@implementation YJHMessageOperation {
-    BOOL _isExecuting;
-    BOOL _isFinished;
-}
+@implementation YJHMessageOperation
+
+@synthesize executing = _executing;
+@synthesize finished  = _finished;
+@synthesize cancelled = _cancelled;
 
 - (instancetype)init {
     if (self = [super init]) {
-        _isExecuting = NO;
-        _isFinished = NO;
+        [self complete];
         _time = 2.f;
     }
     return self;
@@ -35,56 +35,58 @@
     return self;
 }
 
-- (BOOL)isConcurrent {
-    return YES;
-}
-
-- (BOOL)isExecuting {
-    return _isExecuting;
-}
-
-- (BOOL)isFinished {
-    return _isFinished;
-}
-
-- (void)finishedChange {
-    [self willChangeValueForKey:@"isFinished"];
-    _isFinished = YES;
-    [self didChangeValueForKey:@"isFinished"];
-}
-
-- (void)executingChange {
-    [self willChangeValueForKey:@"isExecuting"];
-    _isExecuting = YES;
-    [self didChangeValueForKey:@"isExecuting"];
-}
-
 - (void)start {
     @autoreleasepool {
         if (self.isCancelled) {
-            [self finishedChange];
+            self.finished = YES;
             return;
         }
-        [self executingChange];
-        __weak typeof(self) wSelf = self;
+        self.executing = YES;
+        
         dispatch_async(dispatch_get_main_queue(), ^{
+            __weak __typeof__(self) weakSelf = self;
             [self.animationView showOperationViewDuration:self.time isFinish:^(BOOL isFinish) {
-                __strong typeof(wSelf) strongSelf = wSelf;
-                if (strongSelf != self) {
-                    return ;
+                __typeof__(weakSelf) self = weakSelf;
+                if (isFinish) {
+                    [self complete];
+                } else {
+                    [self cancel];
                 }
-                [self finishedChange];
             }];
         });
     }
 }
 
-- (void)cancel {
-    [super cancel];
-    [self executingChange];
-    [self finishedChange];
+- (void)complete {
+    self.finished = YES;
+    self.executing = NO;
 }
 
+- (void)cancel {
+    self.cancelled = YES;
+    [self complete];
+}
 
+- (BOOL)isConcurrent {
+    return YES;
+}
+
+- (void)setFinished:(BOOL)finished {
+    [self willChangeValueForKey:@"isFinished"];
+    _finished = finished;
+    [self didChangeValueForKey:@"isFinished"];
+}
+
+- (void)setExecuting:(BOOL)executing {
+    [self willChangeValueForKey:@"isExecuting"];
+    _executing = executing;
+    [self didChangeValueForKey:@"isExecuting"];
+}
+
+- (void)setCancelled:(BOOL)cancelled {
+    [self willChangeValueForKey:@"isCancelled"];
+    _cancelled = cancelled;
+    [self didChangeValueForKey:@"isCancelled"];
+}
 
 @end

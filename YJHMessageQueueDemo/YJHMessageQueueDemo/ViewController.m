@@ -54,6 +54,7 @@
 - (YJHScrollView *)scrollView {
     if (_scrollView == nil) {
         _scrollView = [[YJHScrollView alloc] initWithFrame:CGRectMake(0, UIScreen.mainScreen.bounds.size.height - 350, 240, 80)];
+        _scrollView.backgroundColor = kRandomColor;
     }
     return _scrollView;
 }

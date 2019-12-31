@@ -18,7 +18,6 @@
 }
 
 - (void)setupViews {
-    self.opaque = NO;
     self.hidden = YES;
 }
 
@@ -30,9 +29,8 @@
     }];
     dispatch_async(dispatch_get_main_queue(), ^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(during * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.alpha = 0;
             self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
-            self.alpha = 1;
+            self.hidden = YES;
             isFinish(YES);
         });
     });

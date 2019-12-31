@@ -20,7 +20,6 @@
 }
 
 - (void)setupViews {
-    self.opaque = NO;
     self.hidden = YES;
     
     _label = [[UILabel alloc] initWithFrame:CGRectMake(40, 20, 20, 20)];
@@ -31,36 +30,29 @@
 
 - (void)showOperationViewDuration:(NSTimeInterval)during isFinish:(void (^)(BOOL))isFinish {
     self.hidden = NO;
-    //    self.transform = CGAffineTransformMakeTranslation(-self.frame.size.width, 0);
     
     _label.text = [NSString stringWithFormat:@"%f", during];
     [_label sizeToFit];
     
     CATransition *animation = [CATransition animation];
     animation.duration = 0.5;
-    animation.type = @"push";
+    animation.type = kCATransitionPush;
     animation.subtype = kCATransitionFromTop;
-    [self.layer addAnimation:animation forKey:@"animation"];
-    
-    [UIView animateWithDuration:0.2 animations:^{
-        self.transform = CGAffineTransformIdentity;
-    }];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(during * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.alpha = 0;
-            CATransition *animation = [CATransition animation];
-            animation.duration = 0.5;
-            animation.type = @"push";
-            animation.subtype = kCATransitionFromTop;
-            [self.layer addAnimation:animation forKey:@"animation"];
-            
-            self.alpha = 1;
-            
+    [self.layer addAnimation:animation forKey:@"push"];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(during * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        CATransition *animation = [CATransition animation];
+        animation.duration = 0.5;
+        animation.type = kCATransitionPush;
+        animation.subtype = kCATransitionFromTop;
+        [self.layer addAnimation:animation forKey:@"push"];
+
+        [UIView animateWithDuration:0.5 animations:^{
+        } completion:^(BOOL finished) {
             self.hidden = YES;
             isFinish(YES);
-        });
+        }];
     });
-
 }
 
 @end
