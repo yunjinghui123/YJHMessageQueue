@@ -33,12 +33,12 @@
 }
 
 - (IBAction)translation:(UIButton *)sender {
-    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView duration:3];
+    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.translationView];
     [self.manager.operationQueue addOperation:operation];
 }
 
 - (IBAction)scroll:(UIButton *)sender {
-    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView duration:3];
+    YJHMessageOperation *operation = [[YJHMessageOperation alloc] initWithAnimationView:self.scrollView];
     [self.manager.operationQueue addOperation:operation];
 
 }

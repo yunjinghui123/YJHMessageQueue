@@ -14,9 +14,8 @@
 @optional
 
 /// 自定义view调用，用户展示外部动画时间，完成状态
-/// @param during 动画需要展示的时间
 /// @param isFinish 本次动画是否完成
-- (void)showOperationViewDuration:(NSTimeInterval)during isFinish:(void (^)(BOOL isFinish))isFinish;
+- (void)showOperationWithFinish:(void (^)(BOOL isFinish))isFinish;
 
 @end
 
