@@ -9,6 +9,9 @@
 #import "YJHMessageOperation.h"
 
 @interface YJHMessageOperation ()
+@property (assign, nonatomic, getter = isExecuting) BOOL executing;
+@property (assign, nonatomic, getter = isFinished)  BOOL finished;
+@property (assign, nonatomic, getter = isCancelled) BOOL cancelled;
 @property (nonatomic, weak) id<YJHMessageQueueDelegate> animationView;
 @end
 
@@ -33,11 +36,13 @@
 }
 
 - (void)start {
-    @autoreleasepool {
+    @synchronized (self) {
         if (self.isCancelled) {
             self.finished = YES;
             return;
         }
+        
+        self.finished = NO;
         self.executing = YES;
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -55,13 +60,22 @@
 }
 
 - (void)complete {
-    self.finished = YES;
-    self.executing = NO;
+    @synchronized (self) {
+        if (self.isExecuting) {
+            self.finished = YES;
+            self.executing = NO;
+        }
+    }
 }
 
 - (void)cancel {
-    self.cancelled = YES;
-    [self complete];
+    @synchronized (self) {
+        [super cancel];
+        if (self.isExecuting) {
+            self.cancelled = YES;
+            [self complete];
+        }
+    }
 }
 
 - (BOOL)isConcurrent {
