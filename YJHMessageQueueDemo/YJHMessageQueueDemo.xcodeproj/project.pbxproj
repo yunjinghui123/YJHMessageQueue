@@ -11,6 +11,7 @@
 		1C43234C232AA096003BDE3D /* YJHMessageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43234A232AA096003BDE3D /* YJHMessageOperation.m */; };
 		1C432353232AA0A3003BDE3D /* YJHTranslationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C43234E232AA0A2003BDE3D /* YJHTranslationView.m */; };
 		1C432354232AA0A3003BDE3D /* YJHScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C432351232AA0A2003BDE3D /* YJHScrollView.m */; };
+		1CCE51D52D71E5DF00AD3CCF /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1CCE51D32D71E5DF00AD3CCF /* PrivacyInfo.xcprivacy */; };
 		B3B2BA26232A9F4D00DE98D6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2BA25232A9F4D00DE98D6 /* AppDelegate.m */; };
 		B3B2BA29232A9F4D00DE98D6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B2BA28232A9F4D00DE98D6 /* ViewController.m */; };
 		B3B2BA2C232A9F4D00DE98D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B2BA2A232A9F4D00DE98D6 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		1C43234F232AA0A2003BDE3D /* YJHTranslationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHTranslationView.h; sourceTree = "<group>"; };
 		1C432351232AA0A2003BDE3D /* YJHScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YJHScrollView.m; sourceTree = "<group>"; };
 		1C432352232AA0A2003BDE3D /* YJHScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YJHScrollView.h; sourceTree = "<group>"; };
+		1CCE51D32D71E5DF00AD3CCF /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		B3B2BA21232A9F4D00DE98D6 /* YJHMessageQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YJHMessageQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B2BA24232A9F4D00DE98D6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B3B2BA25232A9F4D00DE98D6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		1C432344232AA095003BDE3D /* YJHMessageQueue */ = {
 			isa = PBXGroup;
 			children = (
+				1CCE51D42D71E5DF00AD3CCF /* Resources */,
 				1C432348232AA096003BDE3D /* YJHMessageQueue.h */,
 				1C432345232AA096003BDE3D /* YJHMessageQueueDelegate.h */,
 				1C432349232AA096003BDE3D /* YJHMessageQueueManger.h */,
@@ -83,6 +86,14 @@
 				1C432351232AA0A2003BDE3D /* YJHScrollView.m */,
 			);
 			path = YJHScrollDemo;
+			sourceTree = "<group>";
+		};
+		1CCE51D42D71E5DF00AD3CCF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CCE51D32D71E5DF00AD3CCF /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B3B2BA18232A9F4D00DE98D6 = {
@@ -179,6 +190,7 @@
 			files = (
 				B3B2BA31232A9F5000DE98D6 /* LaunchScreen.storyboard in Resources */,
 				B3B2BA2E232A9F5000DE98D6 /* Assets.xcassets in Resources */,
+				1CCE51D52D71E5DF00AD3CCF /* PrivacyInfo.xcprivacy in Resources */,
 				B3B2BA2C232A9F4D00DE98D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
