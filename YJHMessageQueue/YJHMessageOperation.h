@@ -16,7 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 初始化 operation 对象，是放入queue的一条消息
 /// @param animationView 动画的内容，自定义view
-- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView;
+/// @param time 动画展示的时间
+- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView duration:(NSTimeInterval)time;
 
 /// 操作完成
 - (void)complete;

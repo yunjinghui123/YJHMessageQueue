@@ -13,6 +13,7 @@
 @property (assign, nonatomic, getter = isFinished)  BOOL finished;
 @property (assign, nonatomic, getter = isCancelled) BOOL cancelled;
 @property (nonatomic, weak) id<YJHMessageQueueDelegate> animationView;
+@property (nonatomic, assign) NSTimeInterval time;
 @end
 
 @implementation YJHMessageOperation
@@ -23,31 +24,31 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        _time = 2.f;
         [self complete];
     }
     return self;
 }
 
-- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView {
+- (instancetype)initWithAnimationView:(id<YJHMessageQueueDelegate>)animationView duration:(NSTimeInterval)time {
     if (self = [super init]) {
         self.animationView = animationView;
+        self.time = time;
     }
     return self;
 }
 
 - (void)start {
-    @synchronized (self) {
+    @autoreleasepool {
         if (self.isCancelled) {
             self.finished = YES;
             return;
         }
-        
-        self.finished = NO;
         self.executing = YES;
         
         dispatch_async(dispatch_get_main_queue(), ^{
             __weak __typeof__(self) weakSelf = self;
-            [self.animationView showOperationWithFinish:^(BOOL isFinish) {
+            [self.animationView showOperationViewDuration:self.time isFinish:^(BOOL isFinish) {
                 __typeof__(weakSelf) self = weakSelf;
                 if (isFinish) {
                     [self complete];
@@ -60,22 +61,13 @@
 }
 
 - (void)complete {
-    @synchronized (self) {
-        if (self.isExecuting) {
-            self.finished = YES;
-            self.executing = NO;
-        }
-    }
+    self.finished = YES;
+    self.executing = NO;
 }
 
 - (void)cancel {
-    @synchronized (self) {
-        [super cancel];
-        if (self.isExecuting) {
-            self.cancelled = YES;
-            [self complete];
-        }
-    }
+    self.cancelled = YES;
+    [self complete];
 }
 
 - (BOOL)isConcurrent {
@@ -99,5 +91,6 @@
     _cancelled = cancelled;
     [self didChangeValueForKey:@"isCancelled"];
 }
+
 
 @end
