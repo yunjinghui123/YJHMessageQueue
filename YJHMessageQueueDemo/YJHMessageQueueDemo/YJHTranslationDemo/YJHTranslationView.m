@@ -28,7 +28,7 @@
     [self addSubview:_label];
 }
 
-- (void)showOperationWithFinish:(void (^)(BOOL))isFinish {
+- (void)showOperationViewDuration:(NSTimeInterval)during isFinish:(void (^)(BOOL))isFinish {
     self.hidden = NO;
     
     _label.text = [NSString stringWithFormat:@"%d", 3];
@@ -40,7 +40,7 @@
     animation.subtype = kCATransitionFromTop;
     [self.layer addAnimation:animation forKey:@"push"];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(during * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         CATransition *animation = [CATransition animation];
         animation.duration = 0.5;
         animation.type = kCATransitionPush;
